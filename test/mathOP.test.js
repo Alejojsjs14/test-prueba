@@ -4,10 +4,10 @@ import assert from "node:assert";
 // Estructura
 describe("Math operations", () => {
   before(() => {
-    console.log("Iniciando pruebas dpara operaciones matematicas...");
+    console.log("Iniciando pruebas...");
   }),
     after(() => {
-      console.log("Finalizando pruebas para operaciones matematicas...");
+      console.log("Finalizando pruebas...");
     });
   test("Addition", () => {
     const result = 2 + 2;
