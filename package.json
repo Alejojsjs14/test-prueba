@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node --test --env-file=.env.test",
+    "test:coverage": "npx c8 --all --include 'src/' npm test --env-file=.env.test",
     "start": "node --watch --env-file=.env ./src/app.js"
   },
   "keywords": [],

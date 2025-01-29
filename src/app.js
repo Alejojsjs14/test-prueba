@@ -13,16 +13,6 @@ app.get("/usuarios", (req, res) => {
   res.status(200).json({ usuarios });
 });
 
-// llamada a la ruta de usuarios por id
-app.get("/usuarios/:id", (req, res) => {
-  const { id } = req.params;
-  const usuario = usuarios.find((u) => u.id === parseInt(id));
-
-  if (!usuario) {
-    res.status(404).json({ message: "usuario no encontrado" });
-  }
-});
-
 // llamado a una api externa con data real
 app.get("/external-data", async (req, res) => {
   try {
