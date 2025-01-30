@@ -1,6 +1,8 @@
 import { test, describe, before, after } from "node:test";
 import assert from "node:assert";
 import nock from "nock";
+import request from "supertest";
+import { app } from "../src/app.js";
 import { fetchExternalData } from "../src/service.js";
 import { API_EXTERNA } from '../src/utils/env.config.js';
 
@@ -59,4 +61,21 @@ describe("String operations", () => {
 });
 
 
+// describe('GET /external-data', () => {
+//   test('should call next with error if fetchExternalData fails', async () => {
+//       // Simula un error en fetchExternalData
+//       const originalFetchExternalData = app.fetchExternalData;
+//       app.fetchExternalData = async () => {
+//           throw new Error('Failed to fetch data');
+//       };
 
+//       const response = await request(app)
+//           .get('/external-data')
+//           .expect(500); // Espera un código de estado 500
+
+//       assert.strictEqual(response.body.error, 'Failed to fetch data');
+
+//       // Restaura la función original
+//       app.fetchExternalData = originalFetchExternalData;
+//   });
+// });
